@@ -2,10 +2,8 @@ from ultralytics import YOLO
 
 if __name__ == "__main__":
     # โหลดโมเดล
-    model = YOLO(
-        
-        r"C:/Users/jokoz/Documents/Vscode-work/runs/detect/C-Webcam/train(webcam)-03-small/weights/best.pt")
-    data = r"C:/Users/jokoz/Documents/Vscode-work/datasets/dataset_baseline/data.yaml"
+    model = YOLO(r"/runs/detect/train/weights/best.pt")
+    data = r"your_dataset_path/data.yaml"
 
     # Train split
     metrics_train = model.val(split="train", data=data)
